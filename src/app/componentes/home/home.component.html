@@ -1,0 +1,54 @@
+<div class="container">
+
+  <h1>Fomulario</h1><br>
+  <button class="btn btn-outline-primary" routerLink="/listar">Listado</button>
+  <hr>
+
+  <div class="col">
+
+    <form [formGroup]="form" >
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input 
+            formControlName="name"
+            [(ngModel)]="user.name"
+             type="text" class="form-control">
+            <small  class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Lastname</label>
+            <input 
+            formControlName="lastname"
+            [(ngModel)]="user.lastname"
+             type="email" class="form-control">
+            <small  class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Telefono</label>
+            <input 
+            formControlName="telefono"
+            [(ngModel)]="user.telefono"
+             type="email" class="form-control">
+            <small  class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Email</label>
+            <input 
+            formControlName="email"
+            [(ngModel)]="user.email"
+             type="text" class="form-control" placeholder="Password">
+          </div>
+
+          <button (click)="guardarUser()"
+           type="submit" class="btn btn-primary">Submit</button>
+           {{ form.valid }}
+           {{ form.status }}
+
+        </form>
+
+  </div>
+
+</div>
