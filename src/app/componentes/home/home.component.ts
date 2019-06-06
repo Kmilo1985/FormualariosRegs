@@ -144,6 +144,8 @@ export class HomeComponent implements OnInit {
                   } else if (cadena.length === cel) {
 
                 console.log('Celuar correcto'+ cadena.length);
+                resolve({ valido: true});
+
 
                   }
                   if(cadena.length !== tel && cadena.length !== cel){
